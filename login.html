@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Employee management System</title>
+        
+    </head>
+    <body>
+        <div>
+            <input type="text" id="inputUser" >
+        </div>
+        <div>
+            <input type="password" id="inputPassword" >
+        </div>
+            <div>
+         <button  type="submit" id="login"> Sign in</button>
+          </div>
+          <div>
+              <a href="register.html"><button >Register</button></a>
+          </div>
+<script >
+const button = document.getElementById('login');
+button.addEventListener('click',function onClick(e){
+
+const uname = document.getElementById('inputUser').value;
+const password = document.getElementById('inputPassword').value;
+console.log(uname);
+console.log(password);
+
+console.log('Button is clicked');
+})
+</script>
+</body>
+</html>

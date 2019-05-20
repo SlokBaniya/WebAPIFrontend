@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Employee management System Register</title>
+        
+    </head>
+    <body>
+        <div>
+            <input type="text" id="fname" placeholder="Enter first name">
+        </div>
+        <div>
+            <input type="text" id="lname" placeholder="Enter last name">
+        </div>
+        <div>
+            <input type="text" id="Username" placeholder="Enter Username">
+        </div>
+        <div>
+            <input type="text" id="Email" placeholder="Enter email">
+        </div>
+        <div>
+            <input type="password" id="inputPassword" placeholder="Enter password">
+        </div>
+        <div>
+            <input type="password" id="ReinputPassword" placeholder="Re Enter password">
+        </div>
+            <div>
+         <a href="login.html"><button >Login</button></a>
+          </div>
+          <div>
+              <a href="register.html"><button >Register</button></a>
+          </div>
+<script >
+const button = document.getElementById('login');
+button.addEventListener('click',function onClick(e){
+
+const uname = document.getElementById('inputUser').value;
+const password = document.getElementById('inputPassword').value;
+console.log(uname);
+console.log(password);
+
+console.log('Button is clicked');
+})
+</script>
+</body>
+</html>

@@ -1,10 +1,10 @@
 # Your Project Title
 
-Name: Your full name here
+Name: Lok Bahadur Baniya
 
-CollegeID: Your college ID
+CollegeID: 160205
 
-Batch: Jan19A/19B/19C/19D
+Batch: Jan 19B
 
 
 # Frontend code architecture

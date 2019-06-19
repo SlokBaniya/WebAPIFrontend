@@ -23,19 +23,27 @@
             <input type="password" id="ReinputPassword" placeholder="Re Enter password">
         </div>
             <div>
-         <a href="login.html"><button >Login</button></a>
+              <button type="submit" id="register">Register</button>
+         
           </div>
           <div>
-              <a href="register.html"><button >Register</button></a>
+              <a href="login.html"><button >Login</button></a>
           </div>
 <script >
-const button = document.getElementById('login');
+const button = document.getElementById('register');
 button.addEventListener('click',function onClick(e){
 
-const uname = document.getElementById('inputUser').value;
+const fname = document.getElementById('fname').value;
+const lname = document.getElementById('lname').value;
+const username = document.getElementById('Username').value;
+const email = document.getElementById('Email').value;
 const password = document.getElementById('inputPassword').value;
-console.log(uname);
+const repassword = document.getElementById('ReinputPassword').value;
+console.log(fname);
+console.log(lname);
+console.log(username);
 console.log(password);
+console.log(repassword);
 
 console.log('Button is clicked');
 })

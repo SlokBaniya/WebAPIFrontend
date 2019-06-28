@@ -214,10 +214,10 @@
 	border-radius:0px;
 	border-bottom:1px solid #fff;
 	background-color:transparent;
-	color:#fff;
+	
 }
 .custom:hover, .custom:focus{
-	background-color:transparent;
+	
 	box-shadow:0px 0px 0px;
 	border-bottom:1px solid red;
 }

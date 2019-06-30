@@ -23,8 +23,9 @@ window.onload = function() {
             })
             .then(json => {
                 if (json.status) {
-                    // localStorage.setItem('Token', json.accessToken);
-                    // window.location.href = 'dashboard.html'
+                    localStorage.setItem('Token', json.accessToken);
+                    localStorage.setItem('username',username);
+                    window.location.href = 'admindash.html'
                     alert("login success");
                 } else {
                     alert('user not found');

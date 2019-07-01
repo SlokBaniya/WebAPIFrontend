@@ -25,7 +25,12 @@ window.onload = function() {
                 if (json.status) {
                     localStorage.setItem('Token', json.accessToken);
                     localStorage.setItem('username',username);
-                    window.location.href = 'admindash.html'
+                    if(username == 'admin'){
+                    window.location.href = 'admindash.html';
+                }
+                    else{
+                        window.location.href = 'userdash.html';
+                    }
                     alert("login success");
                 } else {
                     alert('user not found');

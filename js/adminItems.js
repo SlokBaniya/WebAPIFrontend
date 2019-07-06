@@ -1,6 +1,5 @@
 window.onload = function() {
-
-    fetch('http://localhost:8000/api/admin/items', {
+       fetch('http://localhost:8000/api/admin/items', {
             headers: {
                 "Authorization": localStorage.getItem('Token')
             }
@@ -10,19 +9,19 @@ window.onload = function() {
         })
         .then(data => {
             const items = data;
-            console.log(items);
+            
             let details = '';
 
             details += `
             <tr>
-                <td><b>Title</b></td>
-                <td><b>Content</b></td>
-                <td><b>Author</b></td>
+                <td><b>Product Name</b></td>
                 <td><b>Category</b></td>
+                <td><b>Price</b></td>
+                <td><b>Description</b></td>
                 <td><b>Image</b></td>
                 <td><b>Created At</b></td>
                 <td><b>Updated At</b></td>
-                <td align="center"><b>Action</b></td>
+                <td colspan="2" align="center"><b>Action</b></td>
                
              </tr>
             `
@@ -37,13 +36,16 @@ window.onload = function() {
                     <td><img src="${url+element.image}" height="50" width"60"></td>
                     <td>${element.created_at}</td>
                     <td>${element.updated_at}</td>
-                    <td><a href="" class="btn btn-success">Edit</a></td>
+                    <td><a href="adminAddItems.html"><button class="btn btn-success" id="btnEdit" value="${element.id}">Edit</button></a></td>
+                    <td><a href="" class="btn btn-danger" value="${element.id}">Remove</a></td>
                     
                     </tr>
                      `;
 
             });
             document.getElementById('detail').innerHTML = details;
+            
+            
 
         })
 

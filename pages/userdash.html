@@ -132,9 +132,23 @@
 	</div>
 </div>
 
-	<script>
-	
-	
+<script>
+		// Sticky Header
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 100) {
+			$(".top-nav").addClass("light-header");
+		} else {
+			$(".top-nav").removeClass("light-header");
+		}
+	});
+
+	// Year for copy content
+	$(function(){
+	var theYear = new Date().getFullYear();
+	$('#year').html(theYear);
+	});
 	</script>
 	<script>
 		function w3_open() {
@@ -145,7 +159,7 @@
 		function w3_close() {
 			document.getElementById("mySearchbar").style.display = "none";
 		}
-	</script>
+    </script>
 	 <script src="../js/logout.js"></script>
 	 <script src="../js/profile.js"></script>
 	

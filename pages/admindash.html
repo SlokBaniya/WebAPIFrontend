@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../js/bootstrap.min.js">
-    <link rel="stylesheet" href="../jquery/jquery-3.4.1.min.js">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+   
+	<script src="../jquery/jquery-3.4.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	
     <title>Musical Plaza/ Home</title>
   </head>
@@ -60,7 +61,7 @@
 											})								
 											// onclick(window.location.href= "login.html")
 										}else{
-										document.write("ADMIN");
+										document.write(username);
 										const btnUser = document.getElementById('btnUser');
 											btnUser.addEventListener('click',function(){
 												window.location.href = "admindash.html"
@@ -138,11 +139,16 @@
 		<p>Copy right @ ExpressTech Software Solution all right reserve</p>
 	</div>
 </div>
- <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-	 <script src="js/wow.js"></script>
-	 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
+<script>		
+		if(!localStorage.getItem('Token')){
+			window.location.href ="login.html"
+			alert("please login first!");
+		}
+		if(localStorage.getItem('username')=== 'admin'){
+			window.location.href ="login.html";
+			alert("Access Denied!");
+		}        
+		</script>
 	<script>
 		// Sticky Header
 	$(window).scroll(function() {    

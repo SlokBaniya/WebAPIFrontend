@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/style.css" type="text/css">
    
 	<script src="../jquery/jquery-3.4.1.min.js"></script>
@@ -17,7 +17,6 @@
     <title>Musical Plaza/ Home</title>
   </head>
   <body>
-	
 		<nav class="navbar navbar-expand-md secound-head top-nav">
 			<div class="container">
 					<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,8 +39,13 @@
 						<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 					</button>
 					<ul class="navbar-nav ml-auto">
-							
-
+							<li class="nav-item">
+								<a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link" href="#" ><i class="fa fa-search"><input type="text"><button id="search" ><img src="../image/search.png" height="16" /></button></i></a>
+									
+										</li>
 										
 										<li class="nav-item">
 									<a class="nav-link" id="btnUser" href="#">
@@ -57,7 +61,7 @@
 											})								
 											// onclick(window.location.href= "login.html")
 										}else{
-										document.write(username);
+										document.write("ADMIN");
 										const btnUser = document.getElementById('btnUser');
 											btnUser.addEventListener('click',function(){
 												window.location.href = "admindash.html"
@@ -73,27 +77,62 @@
 					</div>	
 			</div>
 		</nav>
-		<div class="container-fluid">
-                <div class="row" style="min-height: 626px">
-                    <main role='main' class="col-md-9 ml-sm-auto col-lg-10" style="margin-right:auto">
-                        <div class="contact-form" style="width: 900px">
+        <div class="login-page">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-8 m-auto col-sm-8 col-12">
+                            <div class="log-box">
+                                <div class="row">
+                                    <div class="col-xl-5 col-sm-5 col-12 pad-right-0">
+                                        <div class="logo-back">
+                                                <img src="../image/pic1.jpg" style="width:350px">
+                                        </div>
+                                    </div>
+        <div class="col-xl-7 col-sm-7 col-12 pad-left-0">
+             <div class="log-content">
+                <h1>Add/Update Product  </h1>
+                    <div class="log-body">
+            <div class="form-group myr-top">
+                    <input type="text" class="form-control custom" placeholder="Product name" id="itemsname" required="">
+            </div>
+            <div class="form-group myr-top">
+                    <input type="text" class="form-control custom" placeholder="Category" id="categoty" required="">
+            </div>
+            <div class="form-group myr-top">
+                <input type="text" class="form-control custom" placeholder="Price" id="price" required="">
+            </div>
+            <div class="form-group myr-top">
+                <input type="text" class="form-control custom" placeholder="Product Description" id="desc" required="">
+            </div>
+            <div class="form-group myr-top">
+                <input type="text" class="form-control custom" placeholder="Added date (when items added)" id="created_at" required="">
+            </div>
+            <div class="form-group myr-top">
+                <input type="text" class="form-control custom" placeholder="Updated date (when items updated)" id="updated_at" required="">
+            </div> 
+            <div class="form-group myr-top">
+                    <input type="file" id="image" required="">
+                </div> 
 
-							<h2>Items</h2>
-							<a  href="#" style="float:right; margin-top:-35px; margin-right:130px; "><input type="text" placeholder="List by category"><button id="search" ><img src="../image/search.png" height="16" /></button></a>
-							
-							<a href="adminAddItems.html" class="btn btn-success" style="float:right; margin-top:-40px; ">Add Product</a>
-							<table class='table table-striped' id="detail" style="margin-bottom:50px;">
-								
-
-                            </table>
-
-
-                        </div>
-
+            <div class="log-btn text-center" style="width:40%; float: left;">
+                <button class="btn btn-theme1" id="btnAdd">Add item</button>
+                        <!-- <a href="#" class="btn btn-theme1" >Register</a> -->
+        </div>
+        <div class="log-btn text-center" style="width:40%; float: left;">
+                <button class="btn btn-theme1" id="btnEdit">Update item</button>
+                        <!-- <a href="#" class="btn btn-theme1" >Register</a> -->
+        </div>
+                   
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-                </main>
-			</div>
-
+            </div>
+</div>
 <div class="footer">
 	<div class="container">
 		<div class="row">
@@ -114,12 +153,13 @@
 	</div>
 </div>
 <script>		
-    if(!localStorage.getItem('Token')){
-        window.location.href ="login.html"
-		alert("please login first!");
-	}        
-    </script>
-<script>
+		if(!localStorage.getItem('Token')){
+
+			window.location.href ="login.html"
+			alert("please login first!");
+		}        
+		</script>
+	<script>
 		// Sticky Header
 	$(window).scroll(function() {    
 		var scroll = $(window).scrollTop();
@@ -147,10 +187,10 @@
 			document.getElementById("mySearchbar").style.display = "none";
 		}
     </script>
-
-	
-	<script src="../js/adminItems.js"></script>
-	<script src="../js/logout.js"></script>
-
-
+    <script>
+    const id = btnEdit.value;
+    document.write(id);
+    console.log(id);
+    </script>
+    <script src="../js/logout.js"></script>
    

@@ -50,25 +50,25 @@
 										<li class="nav-item">
 									<a class="nav-link" id="btnUser" href="#">
 									
-									<script>
+											<script>
 										
-										const username =localStorage.getItem('username');
-										if(username==null){
-											document.write("LOGIN");
-											const btnUser = document.getElementById('btnUser');
-											btnUser.addEventListener('click',function(){
-												window.location.href = "login.html"
-											})								
-											// onclick(window.location.href= "login.html")
-										}else{
-										document.write("ADMIN");
-										const btnUser = document.getElementById('btnUser');
-											btnUser.addEventListener('click',function(){
-												window.location.href = "admindash.html"
-											})								
-									// onclick(window.location.href ="adminprofile.html")
-									}
-										</script></a>
+													const admin =localStorage.getItem('admin');
+													if(!admin){
+														document.write("LOGIN");
+														const btnUser = document.getElementById('btnUser');
+														btnUser.addEventListener('click',function(){
+															window.location.href = "login.html"
+														})								
+														// onclick(window.location.href= "login.html")
+													}else{
+													document.write(admin);
+													const btnUser = document.getElementById('btnUser');
+														btnUser.addEventListener('click',function(){
+															window.location.href = "admindash.html"
+														})								
+												// onclick(window.location.href ="adminprofile.html")
+												}
+													</script></a>
 								</li>
 						<li class="nav-item ">
 								<a class="nav-link" id="btnLogout" href='#' >LOG OUT</a>
@@ -90,13 +90,13 @@
                                     </div>
         <div class="col-xl-7 col-sm-7 col-12 pad-left-0">
              <div class="log-content">
-                <h1>Add/Update Product  </h1>
+                <h1>Add/Product  </h1>
                     <div class="log-body">
             <div class="form-group myr-top">
                     <input type="text" class="form-control custom" placeholder="Product name" id="itemsname" required="">
             </div>
             <div class="form-group myr-top">
-                    <input type="text" class="form-control custom" placeholder="Category" id="categoty" required="">
+                    <input type="text" class="form-control custom" placeholder="Category" id="category" required="">
             </div>
             <div class="form-group myr-top">
                 <input type="text" class="form-control custom" placeholder="Price" id="price" required="">
@@ -118,10 +118,7 @@
                 <button class="btn btn-theme1" id="btnAdd">Add item</button>
                         <!-- <a href="#" class="btn btn-theme1" >Register</a> -->
         </div>
-        <div class="log-btn text-center" style="width:40%; float: left;">
-                <button class="btn btn-theme1" id="btnEdit">Update item</button>
-                        <!-- <a href="#" class="btn btn-theme1" >Register</a> -->
-        </div>
+       
                    
                     </div>
                     </div>
@@ -153,7 +150,7 @@
 	</div>
 </div>
 <script>		
-		if(!localStorage.getItem('Token')){
+		if(!localStorage.getItem('AdminToken')){
 
 			window.location.href ="login.html"
 			alert("please login first!");
@@ -191,6 +188,7 @@
     const id = btnEdit.value;
     document.write(id);
     console.log(id);
-    </script>
+	</script>
+	<script src="../js/adminAddItems.js"></script>
     <script src="../js/logout.js"></script>
    

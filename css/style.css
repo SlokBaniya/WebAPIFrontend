@@ -117,8 +117,8 @@
 	width:100%;
 }
 .logo-back{
-	background: url("../img/log-img.png");
-	background-size: auto auto;
+	
+	b
 	display: inline-block;
 	width: 100%;
 	min-height: 450px;
@@ -265,4 +265,19 @@
 	background-repeat: no-repeat;
 	align-items: center;
 }
+.collection-page-home{
+	height: 600px;
+	position:relative;
+	display:inline-flex;
+	width:100%;
+	background-image: url(../image/wall3.jpg); 
+	width: 100%;	
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	align-items: center;
+	opacity: 0.7;
+}
+
+
+
 

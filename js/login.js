@@ -20,16 +20,20 @@ window.onload = function() {
             })
             .then(data => {
                 return data.json();
+                
             })
             .then(json => {
-                if (json.status) {
-                    localStorage.setItem('Token', json.accessToken);
-                    localStorage.setItem('username',username);
+                if (json.status) {  
+                    
                     if(username == 'admin'){
+                        localStorage.setItem('AdminToken', json.accessToken);
                     window.location.href = 'admindash.html';
+                    localStorage.setItem('admin',username);
                 }
                     else{
+                        localStorage.setItem('UserToken', json.accessToken);
                         window.location.href = 'userdash.html';
+                        localStorage.setItem('username',username);
                     }
                     alert("login success");
                 } else {

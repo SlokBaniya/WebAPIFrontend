@@ -52,8 +52,8 @@
 									
 									<script>
 										
-										const username =localStorage.getItem('username');
-										if(username==null){
+										const admin =localStorage.getItem('admin');
+										if(!admin){
 											document.write("LOGIN");
 											const btnUser = document.getElementById('btnUser');
 											btnUser.addEventListener('click',function(){
@@ -61,7 +61,7 @@
 											})								
 											// onclick(window.location.href= "login.html")
 										}else{
-										document.write(username);
+										document.write(admin);
 										const btnUser = document.getElementById('btnUser');
 											btnUser.addEventListener('click',function(){
 												window.location.href = "admindash.html"
@@ -71,7 +71,7 @@
 										</script></a>
 								</li>
 						<li class="nav-item ">
-								<a class="nav-link" id="btnLogout" href='#' >LOG OUT</a>
+								<a class="nav-link" id="btnAdminLogout" href='' >LOG OUT</a>
 							</li>
 						</ul>
 					</div>	
@@ -140,14 +140,11 @@
 	</div>
 </div>
 <script>		
-		if(!localStorage.getItem('Token')){
+		if(!localStorage.getItem('AdminToken')){
 			window.location.href ="login.html"
 			alert("please login first!");
 		}
-		if(localStorage.getItem('username')=== 'admin'){
-			window.location.href ="login.html";
-			alert("Access Denied!");
-		}        
+		       
 		</script>
 	<script>
 		// Sticky Header
@@ -177,5 +174,5 @@
 			document.getElementById("mySearchbar").style.display = "none";
 		}
     </script>
-    <script src="../js/logout.js"></script>
+    <script src="../js/adminlogout.js"></script>
    

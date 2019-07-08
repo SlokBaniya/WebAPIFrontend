@@ -1,5 +1,5 @@
 window.onload = function() {
-       fetch('http://localhost:8000/api/admin/items', {
+       fetch('http://localhost:8000/api/items/view', {
             headers: {
                 "Authorization": localStorage.getItem('Token')
             }
@@ -25,7 +25,7 @@ window.onload = function() {
                
              </tr>
             `
-            const url = 'http://localhost:8000/api/item/upload';
+            const url = 'http://localhost:8000/uploads/';
             items.forEach(element => {
                 details += ` 
                 <tr>
@@ -36,8 +36,8 @@ window.onload = function() {
                     <td><img src="${url+element.image}" height="50" width"60"></td>
                     <td>${element.created_at}</td>
                     <td>${element.updated_at}</td>
-                    <td><a href="adminAddItems.html"><button class="btn btn-success" id="btnEdit" value="${element.id}">Edit</button></a></td>
-                    <td><a href="" class="btn btn-danger" value="${element.id}">Remove</a></td>
+                    <td><a href="adminEditItems.html?${element.id}"><button class="btn btn-success">Edit</button></a></td>
+                    <td><a href="itemsDelete.html?${element.id}" class="btn btn-danger">Remove</a></td>
                     
                     </tr>
                      `;

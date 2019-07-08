@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link  href="../js/bootstrap.min.js">
-    <link  href="../jquery/jquery-3.4.1.min.js">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+   
+	<script src="../jquery/jquery-3.4.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	
     <title>Musical Plaza/ Home</title>
   </head>
@@ -70,7 +71,7 @@
 										</script></a>
 								</li>
 						<li class="nav-item ">
-								<a class="nav-link" id="btnLogout" href="" >LOG OUT</a>
+								<a class="nav-link" id="btnUserLogout" href="" >LOG OUT</a>
 							</li>
 						</ul>
 					</div>	
@@ -82,56 +83,24 @@
 	</div>
 </div>
 <div class="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-3 col-sm-6 col-12">
-				<div class="footer-section">
-					<h6>Company</h6>
-					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-					when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 col-12">
-				<div class="footer-section">
-					<h6>OUR SERVICES</h6>
-					<div class="service-link">
-						<a href="#">ABOUT US</a>
-						<a href="#">SERVICES</a>
-							
-						<a href="#">CONTACT US</a>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-sm-6 col-12">
+					<div class="footer-section">
+						<h6>Musical Plaza</h6>
+						<p>Best of the places to find Musical instruments of your choice.
+							<b>Since 1995 </b> &copy   </p>
+											   
 					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 col-12">
-				<div class="footer-section">
-					<h6>OUR FEATURES</h6>
-					<div class="service-link">
-						<a href="#">Home Delivery</a>
-						<a href="#">Online Enquiry</a>
-						<a href="#">Onine Booking</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-3 col-sm-6 col-12">
-				<div class="footer-section">
-					
-						
-					
-					<h6>PAYMENT METHOD</h6>
-					<a href="#"> Cash on Delievry</a>
-					<h6>Register now </h6>
-					<a href="register.html" class="btn btn-theme">Sign Up</a>
-					
-				</div>
+				</div>		
+				
+				
 			</div>
 		</div>
+		<div class="copy-write">
+			<p>Copy right @ ExpressTech Software Solution all right reserve</p>
+		</div>
 	</div>
-	<div class="copy-write">
-		<p>Copy right @ ExpressTech Software Solution all right reserve</p>
-	</div>
-</div>
-
 <script>
 		// Sticky Header
 	$(window).scroll(function() {    
@@ -159,7 +128,12 @@
 		function w3_close() {
 			document.getElementById("mySearchbar").style.display = "none";
 		}
-    </script>
+	</script>
+	<script> 
+	if(!localStorage.getItem('username')){
+			window.location.href ="login.html"
+			alert("please login first!");
+		}</script>
 	 <script src="../js/logout.js"></script>
 	 <script src="../js/profile.js"></script>
 	

@@ -50,25 +50,25 @@
 										<li class="nav-item">
 									<a class="nav-link" id="btnUser" href="#">
 									
-									<script>
+										<script>
 										
-										const username =localStorage.getItem('username');
-										if(username==null){
-											document.write("LOGIN");
+											const admin =localStorage.getItem('admin');
+											if(!admin){
+												document.write("LOGIN");
+												const btnUser = document.getElementById('btnUser');
+												btnUser.addEventListener('click',function(){
+													window.location.href = "login.html"
+												})								
+												// onclick(window.location.href= "login.html")
+											}else{
+											document.write(admin);
 											const btnUser = document.getElementById('btnUser');
-											btnUser.addEventListener('click',function(){
-												window.location.href = "login.html"
-											})								
-											// onclick(window.location.href= "login.html")
-										}else{
-										document.write("ADMIN");
-										const btnUser = document.getElementById('btnUser');
-											btnUser.addEventListener('click',function(){
-												window.location.href = "admindash.html"
-											})								
-									// onclick(window.location.href ="adminprofile.html")
-									}
-										</script></a>
+												btnUser.addEventListener('click',function(){
+													window.location.href = "admindash.html"
+												})								
+										// onclick(window.location.href ="adminprofile.html")
+										}
+											</script></a>
 								</li>
 						<li class="nav-item ">
 								<a class="nav-link" id="btnLogout" href='#' >LOG OUT</a>
@@ -116,7 +116,7 @@
 	</div>
 </div>
 <script>		
-		if(!localStorage.getItem('Token')){
+		if(!localStorage.getItem('AdminToken')){
 			window.location.href ="login.html"
 			alert("please login first!");
 		}        

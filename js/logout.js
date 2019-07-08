@@ -1,8 +1,12 @@
-   const button = document.getElementById('btnLogout'); 
+   const button1 = document.getElementById('btnUserLogout'); 
+  
    
-   button.addEventListener('click', function() {
+button1.addEventListener('click', function() {
+      
    localStorage.removeItem('username');
-   localStorage.removeItem('Token');
-   alert("Logged Out!");
+   localStorage.removeItem('UserToken');
    window.location.href= "index.html";
+   alert("Logged Out!");
+ 
 })
+

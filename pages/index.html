@@ -54,10 +54,45 @@
 							
 								</li>
 								<li class="nav-item">
-							<a class="nav-link" href="register.html">REGISTER</a>
+							<a class="nav-link"  id="profileregister" ><script>
+								
+								if(localStorage.getItem('username')){
+									const username = localStorage.getItem('username');
+									document.getElementById('profileregister').innerHTML = username;
+									const button = document.getElementById('profileregister');
+									button.addEventListener('click',function(){
+										window.location.href = "userdash.html"
+								
+									})								
+								}else{
+									console.log('register')
+									document.write('REGISTER');
+									const button = document.getElementById('profileregister');
+									button.addEventListener('click',function(){
+										window.location.href = "register.html"
+									
+								})}
+								</script></a>
 						</li>
 			  <li class="nav-item ">
-		        <a class="nav-link" href="login.html" >LOGIN</a>
+						<a class="nav-link"  id="logoutlogin" ><script>
+								
+								if(localStorage.getItem('username')){
+									document.write('LOGOUT');
+								
+									const button = document.getElementById('logoutlogin');
+									button.addEventListener('click',function(){
+										window.location.href = "logout.html"
+								
+									})								
+								}else{									
+									document.write('LOGIN');
+									const button = document.getElementById('logoutlogin');
+									button.addEventListener('click',function(){
+										window.location.href = "login.html"
+									
+								})}
+								</script></a>
 		      </li>
 		    </ul>
 		  </div>	

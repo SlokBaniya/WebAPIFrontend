@@ -15,9 +15,7 @@ window.onload = function() {
             let details = '';
 
             const url = 'http://localhost:8000/uploads/';
-            items.forEach(element => {
-                
-
+            items.forEach(element => {        
                 details += ` 
                 <div class="items col-3" style="float:left;">
                  <div class ="product-image">
@@ -27,7 +25,7 @@ window.onload = function() {
                 <h2>${element.itemsname}</h2><h5>Rs. ${element.price}</h5>
                 </div>
                 <a href="viewItem.html?${element.id}" class="btn btn-primary" id="btnView" style="float:left;" > View More</a>                
-                <a href="AddUserBooking.html?${element.id}" class="btn btn-success" id="btnBook" s"> Book Now</a>
+                <a href="AddUserBooking.html?${element.id}" class="btn btn-success" id="btnBook"> Book Now</a>
                 </div>                    
                      `;
 

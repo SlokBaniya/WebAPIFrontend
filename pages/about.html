@@ -52,50 +52,66 @@
 		      <li class="nav-item">
 							<a class="nav-link" href="#" ><i class="fa fa-search"><input type="text" placeholder="Guitart, drum etc.."><button id="search" ><img src="../image/search.png" height="16" /></button></i></a>
 							
+								</li>
+								<li class="nav-item">
+							<a class="nav-link"  id="profileregister" ><script>
+								
+								if(localStorage.getItem('username')){
+									const username = localStorage.getItem('username');
+									document.getElementById('profileregister').innerHTML = username;
+									const button = document.getElementById('profileregister');
+									button.addEventListener('click',function(){
+										window.location.href = "userdash.html"
+								
+									})								
+								}else{
+									console.log('register')
+									document.write('REGISTER');
+									const button = document.getElementById('profileregister');
+									button.addEventListener('click',function(){
+										window.location.href = "register.html"
+									
+								})}
+								</script></a>
 						</li>
-						<li class="nav-item">
-					<a class="nav-link"  id="profileregister" ><script>
-						
-						if(localStorage.getItem('username')){
-							const username = localStorage.getItem('username');
-							document.getElementById('profileregister').innerHTML = username;
-							const button = document.getElementById('profileregister');
-							button.addEventListener('click',function(){
-								window.location.href = "userdash.html"
-						
-							})								
-						}else{
-							console.log('register')
-							document.write('REGISTER');
-							const button = document.getElementById('profileregister');
-							button.addEventListener('click',function(){
-								window.location.href = "register.html"
-							
-						})}
-						</script></a>
-				</li>
-		<li class="nav-item ">
-				<a class="nav-link"  id="logoutlogin" ><script>
-						
-						if(localStorage.getItem('username')){
-							document.write('LOGOUT');		
-							const button = document.getElementById('logoutlogin');
-							button.addEventListener('click',function(){
-								window.location.href = "logout.html"
-						
-							})								
-						}else{									
-							document.write('LOGIN');
-							const button = document.getElementById('logoutlogin');
-							button.addEventListener('click',function(){
-								window.location.href = "login.html"
-													})}
-						</script></a>
-			</li>
+			  <li class="nav-item ">
+						<a class="nav-link"  id="logoutlogin" ><script>
+								
+								if(localStorage.getItem('username')){
+									document.write('LOGOUT');
+								
+									const button = document.getElementById('logoutlogin');
+									button.addEventListener('click',function(){
+										window.location.href = "logout.html"
+								
+									})								
+								}else{									
+									document.write('LOGIN');
+									const button = document.getElementById('logoutlogin');
+									button.addEventListener('click',function(){
+										window.location.href = "login.html"
+									
+								})}
+								</script></a>
+		      </li>
 		    </ul>
 		  </div>	
 	</div>
 </nav>
+
+<div class="about-page-home col-12" >
+	<div class="container">
+			<div class="col-12">
+					<div class="outline-text col-xl-3 col-sm-6">							
+                            <h3>Welcome to Musical Plaza</h3><br>
+                            <h4> </h4>
+							<a href="contact-us.html" class="btn btn-theme1"  >Contact us</a>
+							
+					</div>
+			</div>
+		
+	</div>
+</div>
 <div class="body">
 		<div class="container" >
 			<div class="row" >			
@@ -107,25 +123,26 @@
 		</div>
 	</div>
 	</div>
-	<div class="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-12 col-sm-6 col-12">
-						<div class="footer-section">
-							<h6>Musical Plaza</h6>
-							<p>Best of the places to find Musical instruments of your choice.
-														<b>Since 1995 </b> &copy   </p>
-																							 
-						</div>
-					</div>		
-					
-					
-				</div>
-			</div>
-			<div class="copy-write">
-				<p>Copy right @ ExpressTech Software Solution all right reserve</p>
+
+<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-12 col-sm-6 col-12">
+					<div class="footer-section">
+						<h6>Musical Plaza</h6>
+						<p>Best of the places to find Musical instruments of your choice.
+													<b>Since 1995 </b> &copy   </p>
+																						 
+					</div>
+				</div>		
+				
+				
 			</div>
 		</div>
+		<div class="copy-write">
+			<p>Copy right @ ExpressTech Software Solution all right reserve</p>
+		</div>
+	</div>
  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -159,4 +176,3 @@
 			document.getElementById("mySearchbar").style.display = "none";
 		}
 	</script>
-	<script src="../js/collection.js"></script>

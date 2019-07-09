@@ -5,38 +5,40 @@ if(!localStorage.getItem('username')){
 window.location.href ="login.html"
 alert("please login first!");
 } else{
+    const username = localStorage.getItem('username');
+    const itemId = window.location.search.substring(1);
 
-    const id = window.location.search.substring(1);
-
-    fetch('http://localhost:8000/api/item/view/'+id, {
+    
+    fetch('http://localhost:8000/api/booking/add', {
         method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    itemsname: itemsname,
+                   
                     itemId: itemId,
-                    username: username,
-                    userid: userid,
-                    created_at: created_at
+                    username: username,                   
+                   
                 })
             })
             .then(data => {
                 return data.json();
             })
             .then(json => {
-                if (json.status === 'success') {
+                if (json.status) {
                     // localStorage.setItem('Token', json.accessToken);
-                    // window.location.href = 'dashboard.html'
-                    alert("Account created")
+                    
+                    alert("Items added to cart")
+                    window.location.href = 'collection.html'
                 } else {
-                    alert('Unabble to create account');
+                    alert('Unable to add items');
+                    window.location.href = 'collection.html'
                 }
             })
             .catch(error => {
                 console.log(error)
             })
 
-    })
-
+   
+}
 }

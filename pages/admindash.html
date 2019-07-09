@@ -27,11 +27,9 @@
 							<li class="nav-item">
 								<a class="nav-link" href="adminUsers.html">Users </a>
 							</li>
+							
 							<li class="nav-item">
-								<a class="nav-link" href="adminCategory.html">Category</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="adminBooking .html">Bookings</a>
+								<a class="nav-link" href="adminBooking.html">Bookings</a>
 							</li>
 						</ul>
 					<a class="navbar-brand" href=""><img src="../image/pic1.jpg" style="width: 80px"><strong>Musical Plaza</strong></a>
@@ -39,13 +37,7 @@
 						<span class="navbar-toggler-icon"><i class="fa fa-bars" aria-hidden="true"></i></span>
 					</button>
 					<ul class="navbar-nav ml-auto">
-							<li class="nav-item">
-								<a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart"></i></a>
-							</li>
-							<li class="nav-item">
-									<a class="nav-link" href="#" ><i class="fa fa-search"><input type="text"><button id="search" ><img src="../image/search.png" height="16" /></button></i></a>
-									
-										</li>
+							
 										
 										<li class="nav-item">
 									<a class="nav-link" id="btnUser" href="#">
@@ -91,26 +83,13 @@
         <div class="col-xl-7 col-sm-7 col-12 pad-left-0">
              <div class="log-content">
                 <h1>Admin Profile  </h1>
-                    <div class="log-body">
-                        <div class="form-group myr-top">
-                            <label>Username</label>
-                            <input type="text" class="form-control custom" placeholder="Username" id="fullname" required="">
-                        </div>
-                        <div class="form-group myr-top ">
-                             <label>Password</label>
-                             <input type="password" class="form-control custom" placeholder="Password" id="password">
-                             
-                        </div>
-                                           
-                                            
-                                           
-            
-                     <div class="log-btn text-center">
-                            <button class="btn btn-theme1" id="btnEdit">Reset Username or Password</button>
-                                    <!-- <a href="#" class="btn btn-theme1" >Register</a> -->
-                    </div>
-                   
-                    </div>
+				<div class="log-body" id="detail">
+						
+						
+
+						
+						
+						</div>
                     </div>
                     </div>
                     </div>
@@ -144,7 +123,8 @@
 			window.location.href ="login.html"
 			alert("please login first!");
 		}
-		       
+
+			       
 		</script>
 	<script>
 		// Sticky Header
@@ -173,6 +153,7 @@
 		function w3_close() {
 			document.getElementById("mySearchbar").style.display = "none";
 		}
-    </script>
+	</script>
+	 <script src="../js/admindash.js"></script>
     <script src="../js/adminlogout.js"></script>
    

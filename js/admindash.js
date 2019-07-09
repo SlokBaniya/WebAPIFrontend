@@ -1,6 +1,6 @@
 window.onload = function() {
    
-    const username = localStorage.getItem('username');
+    const username = localStorage.getItem('admin');
           fetch('http://localhost:8000/api/users/profile/'+username,{
          method:'GET'
         })

@@ -277,6 +277,30 @@
 	align-items: center;
 	opacity: 0.7;
 }
+.about-page-home{
+	height: 600px;
+	position:relative;
+	display:inline-flex;
+	width:100%;
+	background-image: url(../image/wall4.jpg); 
+	margin-bottom: 5px;	
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	align-items: center;
+	
+}
+.contact-page-home{
+	height: 600px;
+	position :relative;
+	display:inline-flex;
+	width:100%;
+	background-image: url(../image/wall3.jpg); 
+	margin-bottom: 5px;	
+	margin-top: 20px;
+	background-repeat: no-repeat;
+	align-items: center;
+	
+}
 
 
 
